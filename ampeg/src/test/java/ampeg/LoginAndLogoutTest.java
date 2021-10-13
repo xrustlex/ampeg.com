@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-class LoginAndLogOutTest {
+class LoginAndLogoutTest {
 
 	private final String MAC_OS_X 		 = "Mac OS X";
 	private final String WINDOWS 		 = "Windows";
