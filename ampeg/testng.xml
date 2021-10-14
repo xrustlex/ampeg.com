@@ -4,6 +4,7 @@
   <test thread-count="5" name="LogInAndOutTestNG">
     <classes>
       <class name="ampeg.LoginAndLogoutTest"/>
+      <class name="ampeg.EdgeTests"/>
     </classes>
   </test> <!-- LogInAndOutTestNG -->
 </suite> <!-- Suite -->
