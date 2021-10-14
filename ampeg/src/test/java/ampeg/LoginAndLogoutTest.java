@@ -50,7 +50,7 @@ class LoginAndLogoutTest {
 
 		driver.close();
 		driver.quit();
-
+		System.out.println("Россия вперед!");
 	}
 
 	@Test
@@ -76,6 +76,7 @@ class LoginAndLogoutTest {
 
 		driver.close();
 		driver.quit();
+		System.out.println("Россия вперед!");
 
 	}
 }
