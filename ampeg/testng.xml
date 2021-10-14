@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="LogInAndOutTestNG">
     <classes>
-      <class name="ampeg.LoginAndLogOutTest"/>
+      <class name="ampeg.LoginAndLogoutTest"/>
     </classes>
   </test> <!-- LogInAndOutTestNG -->
 </suite> <!-- Suite -->
