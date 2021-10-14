@@ -30,8 +30,12 @@ class LoginAndLogoutTest {
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
 
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless");        
+		//options.addArguments("window-size=1400,800");       
+		//options.addArguments("disable-gpu");
+		WebDriver driver = new ChromeDriver(options);
+		
 		driver.get("https://ampeg.com/index.html");
 		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']")).click();
 		driver.findElement(By.cssSelector("input[placeholder='Username']")).sendKeys(userName);
@@ -41,13 +45,6 @@ class LoginAndLogoutTest {
 		driver.findElement(By.cssSelector("a[href='?action=logout']")).click();
 
 		AssertJUnit.assertEquals(driver.getCurrentUrl(), "https://ampeg.com/index.html");
-
-		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']")).click();
-		driver.findElement(By.cssSelector("input[placeholder='Username']")).sendKeys(userName);
-		driver.findElement(By.cssSelector("button[type='submit']")).click();
-
-		AssertJUnit.assertEquals(driver.getCurrentUrl(), "https://ampeg.com/account/login.html");
-
 
 		driver.close();
 		driver.quit();
@@ -68,7 +65,7 @@ class LoginAndLogoutTest {
 		options.addArguments("disable-gpu");
 		WebDriver driver = new ChromeDriver(options);
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get("https://ampeg.com/index.html");
 		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']")).click();
 		driver.findElement(By.cssSelector("input[placeholder='Username']")).sendKeys(userName);
