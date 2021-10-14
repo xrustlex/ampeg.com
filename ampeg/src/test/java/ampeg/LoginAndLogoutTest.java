@@ -11,10 +11,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 class LoginAndLogoutTest {
 
-	private final 		String MAC_OS_X 		= "Mac OS X";
-	private final 		String WINDOWS 		 	= "Windows";
-	private final 		CharSequence userName  	= "xrustlex";
-	private final 		CharSequence password  	= "Vadim123";
+	private final String MAC_OS_X 		= "Mac OS X";
+	private final String WINDOWS 		 	= "Windows";
+	private final CharSequence userName  	= "xrustlex";
+	private final CharSequence password  	= "Vadim123";
 	private final String OS 			 = System.getProperty("os.name");
 	private final String USER_DIR 		 = System.getProperty("user.dir");
 	private final String EDGE_MAC_DRIVER_PATH = "/src/test/resources/mac/chromedriver";
@@ -25,23 +25,25 @@ class LoginAndLogoutTest {
 	@Test
 	public void canLoginAndLogout() {
 
-		System.out.print("Starting canLoginAndLogout test on " + System.getProperty("os.name"));
 		System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_WIN_DRIVER_PATH);
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
 
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");        
-		//options.addArguments("window-size=1400,800");       
-		//options.addArguments("disable-gpu");
 		WebDriver driver = new ChromeDriver(options);
-		
+
 		driver.get("https://ampeg.com/index.html");
-		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']")).click();
-		driver.findElement(By.cssSelector("input[placeholder='Username']")).sendKeys(userName);
-		driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys(password);
-		driver.findElement(By.cssSelector("button[type='submit']")).click();
-		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user loggedinprofile']")).click();
+		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']"))
+		.click();
+		driver.findElement(By.cssSelector("input[placeholder='Username']"))
+		.sendKeys(userName);
+		driver.findElement(By.cssSelector("input[placeholder='Password']"))
+		.sendKeys(password);
+		driver.findElement(By.cssSelector("button[type='submit']"))
+		.click();
+		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user loggedinprofile']"))
+		.click();
 		driver.findElement(By.cssSelector("a[href='?action=logout']")).click();
 
 		AssertJUnit.assertEquals(driver.getCurrentUrl(), "https://ampeg.com/index.html");
@@ -54,22 +56,21 @@ class LoginAndLogoutTest {
 	@Test
 	public void cannotLoginWithoutPassword() {
 
-		System.out.print("Starting canLoginAndLogout test on " + OS);
 		System.setProperty("webdriver.chrome.driver", USER_DIR + EDGE_WIN_DRIVER_PATH);
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
 
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");        
-		options.addArguments("window-size=1400,800");       
-		options.addArguments("disable-gpu");
 		WebDriver driver = new ChromeDriver(options);
-		
-		//driver.manage().window().maximize();
+
 		driver.get("https://ampeg.com/index.html");
-		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']")).click();
-		driver.findElement(By.cssSelector("input[placeholder='Username']")).sendKeys(userName);
-		driver.findElement(By.cssSelector("button[type='submit']")).click();
+		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']"))
+		.click();
+		driver.findElement(By.cssSelector("input[placeholder='Username']"))
+		.sendKeys(userName);
+		driver.findElement(By.cssSelector("button[type='submit']"))
+		.click();
 
 		AssertJUnit.assertEquals(driver.getCurrentUrl(), "https://ampeg.com/account/login.html");
 
@@ -78,8 +79,6 @@ class LoginAndLogoutTest {
 
 	}
 }
-
-
 
 
 

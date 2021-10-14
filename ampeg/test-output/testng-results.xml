@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-13T19:28:31 EDT" name="Default suite" finished-at="2021-10-13T19:28:45 EDT" duration-ms="13993">
+  <suite started-at="2021-10-13T21:47:01 EDT" name="Default suite" finished-at="2021-10-13T21:47:08 EDT" duration-ms="6556">
     <groups>
     </groups>
-    <test started-at="2021-10-13T19:28:31 EDT" name="Default test" finished-at="2021-10-13T19:28:45 EDT" duration-ms="13993">
+    <test started-at="2021-10-13T21:47:01 EDT" name="Default test" finished-at="2021-10-13T21:47:08 EDT" duration-ms="6556">
       <class name="ampeg.LoginAndLogoutTest">
-        <test-method signature="canLoginAndLogout()[pri:0, instance:ampeg.LoginAndLogoutTest@318ba8c8]" started-at="2021-10-13T19:28:31 EDT" name="canLoginAndLogout" finished-at="2021-10-13T19:28:40 EDT" duration-ms="9219" status="PASS">
+        <test-method signature="canLoginAndLogout()[pri:0, instance:ampeg.LoginAndLogoutTest@143640d5]" started-at="2021-10-13T21:47:01 EDT" name="canLoginAndLogout" finished-at="2021-10-13T21:47:08 EDT" duration-ms="6513" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- canLoginAndLogout -->
-        <test-method signature="cannotLoginWithoutPassword()[pri:0, instance:ampeg.LoginAndLogoutTest@318ba8c8]" started-at="2021-10-13T19:28:40 EDT" name="cannotLoginWithoutPassword" finished-at="2021-10-13T19:28:45 EDT" duration-ms="4744" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cannotLoginWithoutPassword -->
       </class> <!-- ampeg.LoginAndLogoutTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
