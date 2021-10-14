@@ -25,7 +25,7 @@ class LoginAndLogoutTest {
 	@Test
 	public void canLoginAndLogout() {
 
-		System.out.println("\n------------------------------------start of LoginAndLogout test------------------------------------\n");
+		System.out.println("\n-----------------------------------start of LoginAndLogout test---------------------------------\n");
 		System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_WIN_DRIVER_PATH);
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
@@ -51,13 +51,13 @@ class LoginAndLogoutTest {
 
 		driver.close();
 		driver.quit();
-		System.out.println("\n-------------------------------------end of LoginAndLogout test-------------------------------------\n");
+		System.out.println("\n-----------------------------------end of LoginAndLogout test-----------------------------------\n");
 	}
 
 	@Test
 	public void cannotLoginWithoutPassword() {
 
-		System.out.println("\n---------------------------------start of LoginWithoutPassword test---------------------------------\n");
+		System.out.println("\n-------------------------------start of LoginWithoutPassword test-------------------------------\n");
 		System.setProperty("webdriver.chrome.driver", USER_DIR + EDGE_WIN_DRIVER_PATH);
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
@@ -78,7 +78,7 @@ class LoginAndLogoutTest {
 
 		driver.close();
 		driver.quit();
-		System.out.println("\n--------------------------------end of LoginWithoutPassword test------------------------------------\n");
+		System.out.println("\n------------------------------end of LoginWithoutPassword test----------------------------------\n");
 
 	}
 }
