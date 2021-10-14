@@ -3,17 +3,18 @@ package ampeg;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 class LoginAndLogoutTest {
 
-	private final String MAC_OS_X 		 = "Mac OS X";
-	private final String WINDOWS 		 = "Windows";
-	private final CharSequence userName  = "xrustlex";
-	private final CharSequence password  = "Vadim123";
-	private RemoteWebDriver driver	  	 = null;
+	private final 		String MAC_OS_X 		= "Mac OS X";
+	private final 		String WINDOWS 		 	= "Windows";
+	private final 		CharSequence userName  	= "xrustlex";
+	private final 		CharSequence password  	= "Vadim123";
 	private final String OS 			 = System.getProperty("os.name");
 	private final String USER_DIR 		 = System.getProperty("user.dir");
 	private final String EDGE_MAC_DRIVER_PATH = "/src/test/resources/mac/chromedriver";
@@ -29,7 +30,7 @@ class LoginAndLogoutTest {
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
 
-		driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://ampeg.com/index.html");
 		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']")).click();
@@ -61,7 +62,12 @@ class LoginAndLogoutTest {
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
 
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless");        
+		options.addArguments("window-size=1400,800");       
+		options.addArguments("disable-gpu");
+		WebDriver driver = new ChromeDriver(options);
+		
 		driver.manage().window().maximize();
 		driver.get("https://ampeg.com/index.html");
 		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']")).click();
