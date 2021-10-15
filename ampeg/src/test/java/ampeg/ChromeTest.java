@@ -20,7 +20,7 @@ class ChromeTest {
 	public void canLoginAndLogout() throws Exception {
 
 		System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_WIN_DRIVER_PATH);
-		
+
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
 
@@ -53,6 +53,32 @@ class ChromeTest {
 
 		driver.close();
 		driver.quit();
+		System.out.println("\n-----------------------------------end of CHROME test-----------------------------------\n");
+
+	}
+
+	@Test
+	public void simpleTest() throws Exception {
+
+		System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://automationstepbystep.com/");
+		Thread.sleep(1000);
+		driver.get("https://www.youtube.com/");
+		Thread.sleep(1000);
+		driver.get("https://www.facebook.com/");
+		Thread.sleep(1000);
+		driver.get("https://vk.com/");
+		Thread.sleep(1000);
+		driver.close();
+		driver.quit();
+
+	}
+
+	@Test
+	public void endOfTests() {
+
 		System.out.println("\n-----------------------------------end of CHROME test-----------------------------------\n");
 
 	}
