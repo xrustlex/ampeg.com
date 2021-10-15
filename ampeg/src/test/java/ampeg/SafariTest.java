@@ -18,7 +18,6 @@ public class SafariTest {
 	@Test
 	public void canLoginTest() throws Exception {
 
-		System.out.println("\n\n-----------------------------------start of SAFARI test---------------------------------\n");
 		System.setProperty("webdriver.chrome.driver", USER_DIR + SAFARI_WIN_DRIVER_PATH);
 
 		if (System.getProperty("os.name").equals(MAC_OS_X))

@@ -19,7 +19,6 @@ class ChromeTest {
 	@Test
 	public void canLoginAndLogout() throws Exception {
 
-		System.out.println("\n\n-----------------------------------start of CHROME test---------------------------------\n");
 		System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_WIN_DRIVER_PATH);
 		
 		if (System.getProperty("os.name").equals(MAC_OS_X))
