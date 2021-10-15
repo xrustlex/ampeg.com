@@ -53,7 +53,6 @@ class ChromeTest {
 
 		driver.close();
 		driver.quit();
-		System.out.println("\n-----------------------------------end of CHROME test-----------------------------------\n");
 
 	}
 
