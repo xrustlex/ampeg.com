@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-13T22:51:34 EDT" name="Default suite" finished-at="2021-10-13T22:51:46 EDT" duration-ms="11679">
+  <suite started-at="2021-10-14T20:50:08 EDT" name="Default suite" finished-at="2021-10-14T20:50:15 EDT" duration-ms="6655">
     <groups>
     </groups>
-    <test started-at="2021-10-13T22:51:34 EDT" name="Default test" finished-at="2021-10-13T22:51:46 EDT" duration-ms="11679">
-      <class name="ampeg.EdgeTests">
-        <test-method signature="canLoginTest()[pri:0, instance:ampeg.EdgeTests@21507a04]" started-at="2021-10-13T22:51:34 EDT" name="canLoginTest" finished-at="2021-10-13T22:51:46 EDT" duration-ms="11640" status="PASS">
+    <test started-at="2021-10-14T20:50:08 EDT" name="Default test" finished-at="2021-10-14T20:50:15 EDT" duration-ms="6655">
+      <class name="ampeg.SafariTest">
+        <test-method signature="canLoginTest()[pri:0, instance:ampeg.SafariTest@21507a04]" started-at="2021-10-14T20:50:08 EDT" name="canLoginTest" finished-at="2021-10-14T20:50:15 EDT" duration-ms="6621" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- canLoginTest -->
-      </class> <!-- ampeg.EdgeTests -->
+      </class> <!-- ampeg.SafariTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

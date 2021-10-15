@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ampeg.LoginAndLogoutTest">
+      <class name="ampeg.SafariTest">
         <methods>
-          <include name="canLoginAndLogout"/>
+          <include name="canLoginTest"/>
         </methods>
-      </class> <!-- ampeg.LoginAndLogoutTest -->
+      </class> <!-- ampeg.SafariTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

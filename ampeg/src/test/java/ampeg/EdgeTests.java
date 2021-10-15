@@ -37,7 +37,7 @@ public class EdgeTests {
 	@Test
 	public void cannotLoginWithEmptyPassword() {
 		
-		System.setProperty("webdriver.edge.driver", USER_DIR + EDGE_MAC_DRIVER_PATH);
+		System.setProperty("webdriver.safari.driver", USER_DIR + EDGE_MAC_DRIVER_PATH);
 		EdgeOptions options = new EdgeOptions(); 
 		WebDriver driver = new EdgeDriver(options);
 		driver.get("https://ampeg.com/index.html");
@@ -55,3 +55,13 @@ public class EdgeTests {
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
