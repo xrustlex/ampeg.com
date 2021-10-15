@@ -50,7 +50,22 @@ class ChromeTest {
 		.click();
 
 		AssertJUnit.assertEquals(driver.getCurrentUrl(), "https://ampeg.com/account/login.html");
+<<<<<<< HEAD
 		
+=======
+
+		driver.close();
+		driver.quit();
+
+	}
+
+	@Test
+	public void simpleTest() throws Exception {
+
+		System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+>>>>>>> branch 'develop' of https://github.com/xrustlex/ampeg.com.git
 		driver.get("https://automationstepbystep.com/");
 		Thread.sleep(1000);
 		driver.get("https://www.youtube.com/");
