@@ -50,19 +50,7 @@ class ChromeTest {
 		.click();
 
 		AssertJUnit.assertEquals(driver.getCurrentUrl(), "https://ampeg.com/account/login.html");
-
-		driver.close();
-		driver.quit();
-		System.out.println("\n-----------------------------------end of CHROME test-----------------------------------\n");
-
-	}
-
-	@Test
-	public void simpleTest() throws Exception {
-
-		System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		
 		driver.get("https://automationstepbystep.com/");
 		Thread.sleep(1000);
 		driver.get("https://www.youtube.com/");
@@ -71,14 +59,9 @@ class ChromeTest {
 		Thread.sleep(1000);
 		driver.get("https://vk.com/");
 		Thread.sleep(1000);
+
 		driver.close();
 		driver.quit();
-
-	}
-
-	@Test
-	public void endOfTests() {
-
 		System.out.println("\n-----------------------------------end of CHROME test-----------------------------------\n");
 
 	}

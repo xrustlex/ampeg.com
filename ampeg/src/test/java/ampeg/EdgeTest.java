@@ -51,18 +51,6 @@ public class EdgeTest {
 
 		AssertJUnit.assertEquals(driver.getCurrentUrl(), "https://ampeg.com/account/login.html");
 
-		driver.close();
-		driver.quit();
-
-	}
-
-	@Test
-	public void simpleTest() throws Exception {
-
-		System.setProperty("webdriver.edge.driver", USER_DIR + EDGE_MAC_DRIVER_PATH);
-		EdgeOptions options = new EdgeOptions(); 
-		WebDriver driver = new EdgeDriver(options);
-		driver.manage().window().maximize();
 		driver.get("https://automationstepbystep.com/");
 		Thread.sleep(1000);
 		driver.get("https://www.youtube.com/");
@@ -71,25 +59,10 @@ public class EdgeTest {
 		Thread.sleep(1000);
 		driver.get("https://vk.com/");
 		Thread.sleep(1000);
+
 		driver.close();
 		driver.quit();
-		
-	}
-	
-	@Test
-	public void endOfTests() {
-		
 		System.out.println("\n-----------------------------------end of EDGE test-----------------------------------\n");
 
 	}
 }
-
-
-
-
-
-
-
-
-
-
