@@ -1,9 +1,11 @@
 package ampeg;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
@@ -24,8 +26,7 @@ public class EdgeTest {
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.edge.driver", USER_DIR + EDGE_MAC_DRIVER_PATH);
 
-		EdgeOptions options = new EdgeOptions(); 
-		WebDriver driver = new EdgeDriver(options);
+		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://ampeg.com/index.html");
 		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']"))

@@ -5,6 +5,7 @@ import org.testng.AssertJUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 class ChromeTest {
@@ -24,8 +25,7 @@ class ChromeTest {
 		if (System.getProperty("os.name").equals(MAC_OS_X))
 			System.setProperty("webdriver.chrome.driver", USER_DIR + CHROME_MAC_DRIVER_PATH);
 
-		ChromeOptions options = new ChromeOptions();
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://ampeg.com/index.html");
 		driver.findElement(By.cssSelector("span[class='header-button-account glyphicon glyphicon-user ']"))
